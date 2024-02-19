@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class PeriodicTable(
     @SerializedName("elements")
-    val elements: List<Element>
+    val elements: List<ElementNW>
 )

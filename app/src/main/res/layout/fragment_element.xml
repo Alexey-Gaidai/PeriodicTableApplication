@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#31343E">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintBottom_toTopOf="@id/ivElement"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBackArrow"
+            tools:text="Hydrogen" />
+
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <ImageView
+            android:id="@+id/ivWiki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_wikipedia"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackArrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBackArrow" />
+
+        <ImageView
+            android:id="@+id/ivElement"
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_overlay"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_overlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <TextView
+            android:id="@+id/tvNameSmaller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintBottom_toTopOf="@id/tvSymbol"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Hydrogen" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvMass"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_background"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/open_sans_light"
+                tools:text="colorless gas" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintBottom_toTopOf="@id/tvMass"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="H" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintBottom_toBottomOf="@id/tvSymbol"
+            app:layout_constraintStart_toEndOf="@id/tvSymbol"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tvMass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintBottom_toBottomOf="@id/ivElement"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1.008" />
+
+        <TextView
+            android:id="@+id/tvAtM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/atomic_mass"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintBottom_toBottomOf="@id/ivElement"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMass" />
+
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/red"
+            app:layout_constraintTop_toBottomOf="@id/ivElement" />
+
+        <TextView
+            android:id="@+id/tvAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/general_info"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine" />
+
+        <TextView
+            android:id="@+id/tvEngName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/eng_name"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAbout" />
+
+        <TextView
+            android:id="@+id/tvEngNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+
+            android:textSize="14sp"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEngName"
+            tools:text="Hydrogen" />
+
+        <View
+            android:id="@+id/vLine1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="@id/tvEngNameText"
+            app:layout_constraintStart_toStartOf="@id/tvEngNameText"
+            app:layout_constraintTop_toBottomOf="@id/tvEngNameText" />
+
+        <TextView
+            android:id="@+id/tvLatinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/latin_name"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine1" />
+
+        <TextView
+            android:id="@+id/tvLatinNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLatinName"
+            tools:text="Hydrogen" />
+
+        <View
+            android:id="@+id/vLine1_"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="@id/tvLatinNameText"
+            app:layout_constraintStart_toStartOf="@id/tvLatinNameText"
+            app:layout_constraintTop_toBottomOf="@id/tvLatinNameText" />
+
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/description"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine1_" />
+
+        <TextView
+            android:id="@+id/tvSummaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSummary"
+            tools:text="Antimony is a chemical element with symbol Sb (from Latin:stibium) and atomic number 51. A lustrous gray metalloid, it is found in nature mainly as the sulfide mineral stibnite (Sb2S3). Antimony compounds have been known since ancient times and were used for cosmetics; metallic antimony was also known, but it was erroneously identified as lead upon its discovery." />
+
+        <View
+            android:id="@+id/vLine2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="@id/tvSummaryText"
+            app:layout_constraintStart_toStartOf="@id/tvSummaryText"
+            app:layout_constraintTop_toBottomOf="@id/tvSummaryText" />
+
+        <TextView
+            android:id="@+id/tvDiscovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/discoveredBy"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine2" />
+
+        <TextView
+            android:id="@+id/tvDiscoveredText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDiscovered"
+            tools:text="Franz-Joseph Müller von Reichenstein." />
+
+        <View
+            android:id="@+id/vLine3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="@id/tvDiscoveredText"
+            app:layout_constraintStart_toStartOf="@id/tvDiscoveredText"
+            app:layout_constraintTop_toBottomOf="@id/tvDiscoveredText" />
+
+        <TextView
+            android:id="@+id/tvAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/appearance"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine3" />
+
+        <TextView
+            android:id="@+id/tvAppearanceText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAppearance"
+            tools:text="colorless gas, exhibiting a whitish glow in a high electric field" />
+
+        <View
+            android:id="@+id/vLine4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="@id/tvAppearanceText"
+            app:layout_constraintStart_toStartOf="@id/tvAppearanceText"
+            app:layout_constraintTop_toBottomOf="@id/tvAppearanceText" />
+
+        <TextView
+            android:id="@+id/tvPhase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/phase"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine4" />
+
+        <TextView
+            android:id="@+id/tvPhaseText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhase"
+            tools:text="Gas" />
+
+        <View
+            android:id="@+id/vLine5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dark_gray"
+            app:fontFamily="@font/open_sans_light"
+            app:layout_constraintEnd_toEndOf="@id/tvPhaseText"
+            app:layout_constraintStart_toStartOf="@id/tvPhaseText"
+            app:layout_constraintTop_toBottomOf="@id/tvPhaseText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

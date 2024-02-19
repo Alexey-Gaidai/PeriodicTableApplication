@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">PeriodicTableApplication</string>
+    <string name="elements">Элементы</string>
+    <string name="atomic_mass">(г/моль)</string>
+    <string name="general_info">Общие сведения</string>
+    <string name="eng_name">Английское название:</string>
+    <string name="latin_name">Латинское название:</string>
+    <string name="description">Описание:</string>
+    <string name="discoveredBy">Кем открыт:</string>
+    <string name="appearance">Внешний вид:</string>
+    <string name="phase">Агрегатное состояние:</string>
 </resources>

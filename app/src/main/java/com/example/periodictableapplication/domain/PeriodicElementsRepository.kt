@@ -1,5 +1,7 @@
 package com.example.periodictableapplication.domain
 
+import com.example.periodictableapplication.domain.model.Element
+
 interface PeriodicElementsRepository {
-    //suspend fun getTable(): PeriodicTable
+    suspend fun getElements(): List<Element>
 }

@@ -2,7 +2,7 @@ package com.example.periodictableapplication.data.api.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Element(
+data class ElementNW(
     @SerializedName("appearance")
     val appearance: String?,
     @SerializedName("atomic_mass")
